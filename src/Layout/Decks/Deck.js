@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { deleteDeck } from "../../utils/api";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function Deck({deck}) {
   const history = useHistory();
-  const handleDelete = async(deckId) =>{
+
+  const handleDelete = async(deckId) => {
         const result = window.confirm("Are you sure you want to delete this deck?");
         if(result){
           deleteDeck(deckId).then(history.go("/"))
