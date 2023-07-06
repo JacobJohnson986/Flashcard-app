@@ -20,7 +20,7 @@ function Card({card , id, updateCards }) {
     };
 
     return (
-        <div className={`card mb-3 ${isDeleting ? "d-none" : ""}`}>
+        <div className={`${isDeleting ? "d-none" : ""}`}>
             <div className="row">
                 <div className="col">
                     <p>{card.front}</p>
