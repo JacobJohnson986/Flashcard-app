@@ -3,7 +3,7 @@ import React from "react";
 const FormComponent = ({ card, handleChange, handleSubmit, buttonText }) => {
     return (
         <form onSumbit={handleSubmit}>
-            <div>
+            <div className="form-padding">
                 <label htmlFor="front">Front</label>
                 <textarea
                     id="front"
@@ -21,7 +21,7 @@ const FormComponent = ({ card, handleChange, handleSubmit, buttonText }) => {
                     onChange={handleChange}
                 ></textarea>
             </div>
-            <button type="submit">{buttonText}</button>
+            <button type="submit" className="btn btn-secondary">{buttonText}</button>
         </form>
     );
 };

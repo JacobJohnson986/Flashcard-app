@@ -33,10 +33,10 @@ function ViewDeck() {
             <div>
                 <h3>{deck.name}</h3>
                 <p>{deck.description}</p>
-                <Link to={`${url}/edit`}><button>Edit</button></Link>
-                <Link to={`${url}/study`}><button>Study</button></Link>
-                <Link to={`${url}/cards/new`}><button>Add Cards</button></Link>
-                <button onClick={deleteHandler}>Delete</button>
+                <Link to={`${url}/edit`}><button className="btn btn-secondary">Edit</button></Link>
+                <Link to={`${url}/study`}><button className="btn btn-dark">Study</button></Link>
+                <Link to={`${url}/cards/new`}><button className="btn btn-primary">Add Cards</button></Link>
+                <button onClick={deleteHandler} className="btn btn-danger">Delete</button>
             </div>
             <div>
                 <h2>Cards</h2>

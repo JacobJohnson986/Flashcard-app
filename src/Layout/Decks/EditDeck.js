@@ -57,8 +57,8 @@ function EditDeck() {
                     </textarea>
                 </div>
             </form>
-            <Link to={`/decks/${deckId}`}><button>Cancel</button></Link>
-            <button  onClick={submitHandler}>Submit</button>
+            <Link to={`/decks/${deckId}`}><button className="btn btn-danger">Cancel</button></Link>
+            <button  onClick={submitHandler} className="btn btn-primary">Submit</button>
         </div>
     )
 }

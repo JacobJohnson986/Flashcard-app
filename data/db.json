@@ -1,4 +1,29 @@
 {
-  "decks": [],
-  "cards": []
+  "decks": [
+    {
+      "name": "Mott Park",
+      "description": "Test",
+      "id": 1
+    }
+  ],
+  "cards": [
+    {
+      "front": "",
+      "back": "",
+      "deckId": 1,
+      "id": 1
+    },
+    {
+      "front": "",
+      "back": "",
+      "deckId": 1,
+      "id": 2
+    },
+    {
+      "front": "",
+      "back": "",
+      "deckId": 1,
+      "id": 3
+    }
+  ]
 }

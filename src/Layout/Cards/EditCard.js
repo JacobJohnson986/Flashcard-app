@@ -54,7 +54,7 @@ function EditCard() {
                 handleSubmit={submitHandler}
                 buttonText="Submit"
             />
-            <Link to={`/decks/${deckId}`}><button>Cancel</button></Link>
+            <Link to={`/decks/${deckId}`}><button type="cancel" className="btn btn-danger">Cancel</button></Link>
         </div>
     )
 }

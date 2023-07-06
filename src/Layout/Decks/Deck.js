@@ -25,7 +25,7 @@ function Deck({deck}) {
         </p>
         <Link to={`/decks/${deck.id}`}><button type="button" className="btn btn-secondary">View</button></Link>
         <Link to={`/decks/${deck.id}/study`}><button type="button" className="btn btn-primary">Study</button></Link>
-        <button type="button" className="btn btn-delete" onClick={() => handleDelete(deck.id)}>Delete</button>
+        <button type="button" className="btn btn-danger" onClick={() => handleDelete(deck.id)}>Delete</button>
       </div>
     </div>
   );

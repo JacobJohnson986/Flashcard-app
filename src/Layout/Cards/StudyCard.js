@@ -7,8 +7,8 @@ function StudyCard({card, isFlipped, flipHandler, nextCardHandler , cardPositon,
             <p>
             {isFlipped ? card.back : card.front}
             </p>
-            <button onClick={flipHandler}>Flip</button>
-            {isFlipped && <button onClick={nextCardHandler}>Next</button>}
+            <button onClick={flipHandler} type="button" className="btn btn-secondary">Flip</button>
+            {isFlipped && <button onClick={nextCardHandler} type="button" className="btn btn-primary">Next</button>}
         </div>
     )
 }

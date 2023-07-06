@@ -52,7 +52,7 @@ function AddCards() {
                 handleSubmit={submitHandler}
                 buttonText="Save"
             />
-                <Link to={`/decks/${deckId}`}><button>Done</button></Link>
+                <Link to={`/decks/${deckId}`}><button type="button" className="btn btn-primary">Done</button></Link>
         </div>
     );
 }
