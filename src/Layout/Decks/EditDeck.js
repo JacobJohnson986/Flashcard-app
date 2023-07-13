@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { readDeck, updateDeck } from "../../utils/api";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 
 function EditDeck() {
     const { deckId } = useParams();
     const [deck, setDeck] = useState({name: "", description: ""});
+    const history = useHistory();
 
     useEffect(() => {
         async function fetchDeck() {
@@ -28,7 +29,8 @@ function EditDeck() {
     const submitHandler = async (e) => {
         e.preventDefault();
         await updateDeck(deck);
-    }
+        history.goBack();
+    };
 
     return (
         <div>

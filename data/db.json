@@ -4,6 +4,11 @@
       "name": "Mott Park",
       "description": "Test",
       "id": 1
+    },
+    {
+      "name": "Another Deck",
+      "description": "With descriptive words.",
+      "id": 2
     }
   ],
   "cards": [
@@ -24,6 +29,36 @@
       "back": "",
       "deckId": 1,
       "id": 3
+    },
+    {
+      "front": "",
+      "back": "",
+      "deckId": 2,
+      "id": 7
+    },
+    {
+      "front": "",
+      "back": "",
+      "deckId": 2,
+      "id": 8
+    },
+    {
+      "front": "",
+      "back": "",
+      "deckId": 2,
+      "id": 9
+    },
+    {
+      "front": "",
+      "back": "",
+      "deckId": 2,
+      "id": 10
+    },
+    {
+      "front": "",
+      "back": "",
+      "deckId": 2,
+      "id": 11
     }
   ]
 }

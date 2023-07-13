@@ -3,9 +3,11 @@ import { useParams } from "react-router-dom";
 import { createCard, readDeck } from "../../utils/api";
 import { Link } from "react-router-dom";
 import FormComponent from "../FormComponent";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 
 function AddCards() {
+    const history = useHistory();
     const initialFormState = {
         front: "",
         back: "",
@@ -37,8 +39,12 @@ function AddCards() {
     const submitHandler = async (e) => {
         e.preventDefault();
         await createCard(deckId, card);
-        setCard(initialFormState);
-        };
+        history.push(`/decks/${deckId}`);
+        setCard({ ...initialFormState });
+      };
+      
+      
+      
             
     return (
         <div>

@@ -38,9 +38,12 @@ function EditCard() {
 
     const submitHandler = async (e) => {
         e.preventDefault();
+        console.log("Submitting card:", card);
+        console.log("Before updateCard:", card);
         await updateCard(card);
-        history.push(`/decks/${deckId}`)
-    }
+        console.log("After updateCard:", card);
+        history.push(`/decks/${deckId}`);
+      };
 
     return (
         <div>

@@ -15,7 +15,6 @@ function Card({card , id, updateCards }) {
             setIsDeleting(true);
             await deleteCard(id);
             setIsDeleting(false);
-            updateCards();
         };
     };
 
