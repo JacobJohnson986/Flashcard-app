@@ -52,8 +52,8 @@ function CreateDeck() {
                     />
                 </div>
             </form>
-            <Link to="/"><button>Cancel</button></Link>
-            <button onClick={handleSubmit}>Submit</button>
+            <Link to="/"><button type="button" className="btn btn-secondary">Cancel</button></Link>
+            <button onClick={handleSubmit} type="button" className="btn btn-primary">Submit</button>
         </div>
     )
 }

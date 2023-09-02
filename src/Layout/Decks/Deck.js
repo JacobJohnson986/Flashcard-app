@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { deleteDeck } from "../../utils/api";
 import { useHistory } from "react-router-dom";
 
+
 function Deck({deck}) {
   const history = useHistory();
 
@@ -12,9 +13,8 @@ function Deck({deck}) {
           deleteDeck(deckId).then(history.go("/"))
         }
        
-    }
-
-
+    };
+    
   return (
     <div className="card">
       <div className="card-body" >
@@ -23,8 +23,10 @@ function Deck({deck}) {
         <p className="card-text">
           {deck.description}
         </p>
-        <Link to={`/decks/${deck.id}`}><button type="button" className="btn btn-secondary">View</button></Link>
-        <Link to={`/decks/${deck.id}/study`}><button type="button" className="btn btn-primary">Study</button></Link>
+        <Link to={`/decks/${deck.id}`}>
+          <button type="button" className="btn btn-secondary">View</button></Link>
+        <Link to={`/decks/${deck.id}/study`}>
+          <button type="button" className="btn btn-primary">Study</button></Link>
         <button type="button" className="btn btn-danger" onClick={() => handleDelete(deck.id)}>Delete</button>
       </div>
     </div>

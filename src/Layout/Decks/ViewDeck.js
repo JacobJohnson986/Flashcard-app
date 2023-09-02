@@ -27,6 +27,7 @@ function ViewDeck() {
             await deleteDeck(deckId);
         }
     }
+    
     return (
         <div>
             <nav><Link to="/">Home</Link> / {deck.name} </nav>

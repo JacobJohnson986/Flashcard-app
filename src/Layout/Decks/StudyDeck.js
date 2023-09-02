@@ -86,7 +86,7 @@ function StudyDeck() {
             in this deck.
           </p>
           <Link to={`/decks/${deckId}/cards/new`}>
-            <button>Add Cards</button>
+            <button className="btn btn-primary">Add Cards</button>
           </Link>
         </div>
       ) : (

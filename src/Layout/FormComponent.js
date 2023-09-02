@@ -2,7 +2,7 @@ import React from "react";
 
 const FormComponent = ({ card, handleChange, handleSubmit, buttonText }) => {
     return (
-        <form onSumbit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <div className="form-padding">
                 <label htmlFor="front">Front</label>
                 <textarea
