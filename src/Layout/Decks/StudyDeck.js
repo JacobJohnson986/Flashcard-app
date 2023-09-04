@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { readDeck, createCard } from "../../utils/api";
+import { readDeck } from "../../utils/api";
 import { useParams, Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import StudyCard from "../Cards/StudyCard";
@@ -52,11 +52,6 @@ function StudyDeck() {
 
   const currentCard = cards[currentCardIndex];
 
-  const addCardHandler = async () => {
-    const newCard = await createCard(deckId, { front: "", back: "" });
-    setCards([...cards, newCard]);
-  };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCards((prevCards) =>
@@ -99,15 +94,16 @@ function StudyDeck() {
             cardPosition={currentCardIndex + 1}
             numberOfCards={cards.length}
           />
-          <FormComponent
-            card={currentCard}
-            handleChange={handleChange}
-            handleSubmit={handleSubmit}
-            buttonText="Save"
-          />
+          {!isFlipped && (
+            <FormComponent
+              card={currentCard}
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+              buttonText="Save"
+            />
+          )}
         </React.Fragment>
       )}
-      <button  onClick={addCardHandler} type="button" className="btn btn-primary">Add Card</button>
     </div>
   );
 }
